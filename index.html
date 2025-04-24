@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iron Spirit - Fitness & Fight Coaching</title>
+  <link rel="icon" href="image/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .reviews-marquee {
+      animation: marquee 30s linear infinite;
+      will-change: transform;
+    }
+
+    .reviews-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* Countdown Timer Styles */
+    .countdown-timer {
+      background-color: black;
+      color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .countdown-timer p {
+      margin: 10px 0;
+    }
+
+  </style>
+</head>
+<body class="bg-[var(--light)] text-[var(--black)] font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-[var(--black)] text-[var(--light)] p-4 flex items-center justify-between flex-wrap">
+    <div class="flex items-center space-x-4">
+      <img src="image/logo_ironspirit.png" width="50" class="inline-block">
+      <h1 class="text-2xl sm:text-4xl font-bold font-rasputin">IRON SPIRIT</h1>
+    </div>
+    
+    <!-- Mobile Menu Button -->
+    <button class="block sm:hidden focus:outline-none" id="menu-btn">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Links (desktop + hidden mobile) -->
+    <div id="nav-links" class="hidden sm:flex flex-col sm:flex-row sm:space-x-6 w-full sm:w-auto mt-4 sm:mt-0 sm:items-center">
+      <a href="index.html" class="hover:text-[var(--red)] font-bold px-4 py-2 font-stint">HOME</a>
+      <a href="about.html" class="hover:text-[var(--red)] px-4 py-2 font-stint">ABOUT US</a>
+      <a href="services.html" class="hover:text-[var(--red)] px-4 py-2 font-stint">SERVICES</a>
+      <a href="book.html" class="bg-[var(--red)] px-4 py-2 rounded text-white hover:bg-[var(--dark-red)] font-stint">BOOK TODAY!</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-[var(--dark-red)] text-[var(--light)] text-center p-20">
+    <h2 class="text-4xl md:text-6xl font-bold mb-6 font-stint">Become stronger in mind, body & spirit</h2> <br>
+    <a href="book.html" class="bg-[var(--red)] px-6 py-3 text-xl font-semibold rounded hover:bg-[var(--red)] hover:text-[var(--black)] transition font-stint">BOOK TODAY!</a>
+  </section>
+
+  <!-- Sale Countdown Section -->
+  <section id="sale-countdown" class="w-full bg-[var(--dark-red)]">
+    <div class="countdown-timer">
+      <h3 class="text-3xl font-semibold mb-4">Limited Time Offer!</h3>
+      <p>Get 20% off on all packages when you book within the next:</p>
+      <div id="countdown" class="text-4xl font-bold mt-4">Loading...</div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="p-10 text-center" id="about">
+    <h3 class="text-3xl font-semibold mb-4">Our Philosophy</h3>
+    <p class="mb-8 max-w-3xl mx-auto">We believe true strength comes from uniting the body, mind, and spirit. Coach ISK & Coach FM bring their unique backgrounds to help you transform your life through discipline, knowledge, and relentless training.</p>
+    <div class="max-w-3xl mx-auto mt-8">
+      <video autoplay loop muted playsinline class="rounded-xl shadow-lg w-full hover:pause">
+        <source src="video/about_preview.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section id="services" class="p-10 text-center">
+    <h3 class="text-3xl font-semibold mb-6">Our Coaches</h3>
+    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <!-- Coach ISK -->
+      <div class="relative p-6">
+        <img src="image/redpaint.png" alt="Red paint splash" class="absolute inset-0 w-full h-full object-cover opacity-100 pointer-events-none">
+        <div class="relative z-10">
+          <h4 class="font-bold text-2xl text-[var(--light)]">Coach ISK</h4>
+          <p class="mt-2 text-[var(--light)]">Muay Thai, Fight Camp, Athletic Programming, Fat Loss, Health & Nutrition</p>
+        </div>
+      </div>
+
+      <!-- Coach FM -->
+      <div class="relative p-6">
+        <img src="image/redpaint.png" alt="Red paint splash" class="absolute inset-0 w-full h-full object-cover opacity-100 pointer-events-none">
+        <div class="relative z-10">
+          <h4 class="font-bold text-2xl text-[var(--light)]">Coach FM</h4>
+          <p class="mt-2 text-[var(--light)]">Booty Builder, Strength Training, Fat Loss, Athletic Programming, Nutrition</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Reviews -->
+  <section class="py-16 text-center">
+    <h3 class="text-3xl font-semibold mb-10">Our Clients</h3>
+    <div class="relative mx-auto max-w-6xl rounded-xl overflow-hidden">
+      <div class="reviews-marquee flex space-x-6 px-6 py-8 w-max">
+        <div class="bg-[var(--dark-red)] text-[var(--light)] p-6 rounded-lg w-80 text-sm shadow-md">
+          "ISK pushed me to levels I never thought possible. Life changing!"
+          <div class="text-center mt-2"><i>Alex</i></div>
+        </div>
+        <div class="bg-[var(--dark-red)] text-[var(--light)] p-6 rounded-lg w-80 text-sm shadow-md">
+          "FM's booty builder plan gave me real results. 10/10 coaching!"
+          <div class="text-center mt-2"><i>Rhea</i></div>
+        </div>
+        <div class="bg-[var(--dark-red)] text-[var(--light)] p-6 rounded-lg w-80 text-sm shadow-md">
+          "They truly care about your progress - mental and physical."
+          <div class="text-center mt-2"><i>Emma</i></div>
+        </div>
+        <div class="bg-[var(--dark-red)] text-[var(--light)] p-6 rounded-lg w-80 text-sm shadow-md">
+          "ISK pushed me to levels I never thought possible. Life changing!"
+          <div class="text-center mt-2"><i>Alex</i></div>
+        </div>
+        <div class="bg-[var(--dark-red)] text-[var(--light)] p-6 rounded-lg w-80 text-sm shadow-md">
+          "FM's booty builder plan gave me real results. 10/10 coaching!"
+          <div class="text-center mt-2"><i>Rhea</i></div>
+        </div>
+        <div class="bg-[var(--dark-red)] text-[var(--light)] p-6 rounded-lg w-80 text-sm shadow-md">
+          "They truly care about your progress - mental and physical."
+          <div class="text-center mt-2"><i>Emma</i></div>
+        </div>
+        <div class="bg-[var(--dark-red)] text-[var(--light)] p-6 rounded-lg w-80 text-sm shadow-md">
+          "ISK pushed me to levels I never thought possible. Life changing!"
+          <div class="text-center mt-2"><i>Alex</i></div>
+        </div>
+        <div class="bg-[var(--dark-red)] text-[var(--light)] p-6 rounded-lg w-80 text-sm shadow-md">
+          "FM's booty builder plan gave me real results. 10/10 coaching!"
+          <div class="text-center mt-2"><i>Rhea</i></div>
+        </div>
+        <div class="bg-[var(--dark-red)] text-[var(--light)] p-6 rounded-lg w-80 text-sm shadow-md">
+          "They truly care about your progress - mental and physical."
+          <div class="text-center mt-2"><i>Emma</i></div>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-4xl mx-auto">
+      <video controls muted class="rounded-lg w-full">
+        <source src="video/client1.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--black)] text-[var(--light)] p-10 text-center">
+    <a href="book.html" class="inline-block bg-[var(--red)] px-8 py-4 text-2xl font-bold rounded hover:bg-[var(--dark-red)] mb-6 font-stint">BOOK TODAY!</a>
+    <div class="space-x-4">
+      <a href="legals.html" class="underline hover:text-[var(--red)]">Privacy Policy</a>
+      <a href="legals.html" class="underline hover:text-[var(--red)]">Terms & Conditions</a>
+      <a href="legals.html" class="underline hover:text-[var(--red)]">Health & Medical Disclaimers</a>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle mobile menu visibility
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('hidden');
+    });
+
+    // Countdown Timer Script
+    function updateCountdown() {
+      const targetDate = new Date("2025-05-01T00:00:00"); // Target sale end date
+      const now = new Date();
+      const remainingTime = targetDate - now;
+      
+      if (remainingTime <= 0) {
+        document.getElementById('countdown').innerText = "Sale Ended";
+        return;
+      }
+
+      const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+      document.getElementById('countdown').innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000); // Update countdown every second
+  </script>
+</body>
+</html>

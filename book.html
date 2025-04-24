@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Today - Iron Spirit</title>
+  <link rel="icon" href="image/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-[var(--light)] text-[var(--black)] font-sans">
+     <!-- Navbar -->
+     <nav class="bg-[var(--black)] text-[var(--light)] p-4 flex items-center justify-between flex-wrap">
+      <div class="flex items-center space-x-4">
+        <img src="image/logo_ironspirit.png" width="50" class="inline-block">
+        <h1 class="text-2xl sm:text-4xl font-bold font-rasputin">IRON SPIRIT</h1>
+      </div>
+      <!-- Mobile Menu Button -->
+      <button class="block sm:hidden focus:outline-none" id="menu-btn">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+  
+      <!-- Navigation Links -->
+      <div id="nav-links" class="hidden sm:flex flex-col sm:flex-row sm:space-x-6 w-full sm:w-auto mt-4 sm:mt-0 sm:items-center">
+        <a href="index.html" class="hover:text-[var(--red)] px-4 py-2 font-stint">HOME</a>
+        <a href="about.html" class="hover:text-[var(--red)] px-4 py-2 font-stint">ABOUT US</a>
+        <a href="services.html" class="hover:text-[var(--red)] px-4 py-2 font-stint">SERVICES</a>
+        <a href="book.html" class="bg-[var(--red)] px-4 py-2 rounded text-white hover:bg-[var(--dark-red)] font-stint">BOOK TODAY!</a>
+      </div>
+    </nav>
+
+  <!-- Booking Section -->
+  <section class="p-10 max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-8">Book Your Session Today</h2>
+    <form class="space-y-6">
+      <div>
+        <label class="block mb-1 font-bold">Name</label>
+        <input type="text" class="w-full p-3 shadow-md rounded" required>
+      </div>
+      <div>
+        <label class="block mb-1 font-bold">Email</label>
+        <input type="email" class="w-full p-3 shadow-md rounded" required>
+      </div>
+      <div>
+        <label class="block mb-1 font-bold">Message</label>
+        <textarea class="w-full p-3 shadow-md rounded" rows="4" required></textarea>
+      </div>
+      <div class="flex justify-center">
+        <button type="submit" class="bg-[var(--red)] text-white px-10 py-5 rounded font-bold hover:bg-[var(--dark-red)]">SEND MESSAGE</button>
+      </div>
+    </form>
+    
+
+    <div class="mt-10 text-center">
+      <h3 class="text-2xl font-bold mb-4">Contact Us Directly</h3>
+      <p class="mb-2">WhatsApp: <a href="#" class="text-[var(--red)] underline">+44 1234 567890</a></p>
+      <p>Instagram: <a href="#" class="text-[var(--red)] underline">@ironspiritcoaching</a></p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="p-10 mt-12 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+    <div class="space-y-6">
+      <div>
+        <h4 class="font-bold text-lg">Do I need experience to join?</h4>
+        <p>No experience is needed. We tailor sessions to all levels, from beginners to advanced fighters.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg">What should I bring to my session?</h4>
+        <p>Comfortable workout clothes, water, and gloves (if you have them). We can provide gear for beginners.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg">How do I pay for sessions?</h4>
+        <p>Payment options will be shared after booking. We accept bank transfer, PayPal, and cash.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg">Where are the sessions held?</h4>
+        <p>We train in Gravesend, Kent. Final location details will be provided upon booking confirmation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--black)] text-[var(--light)] p-10 text-center mt-16">
+    <a href="book.html" class="inline-block bg-[var(--red)] px-8 py-4 text-2xl font-bold rounded hover:bg-[var(--dark-red)] mb-6 font-stint">BOOK TODAY!</a>
+    <div class="space-x-4">
+      <a href="legals.html" class="underline hover:text-[var(--red)]">Privacy Policy</a>
+      <a href="legals.html" class="underline hover:text-[var(--red)]">Terms & Conditions</a>
+      <a href="legals.html" class="underline hover:text-[var(--red)]">Health & Medical Disclaimers</a>
+    </div>
+  </footer>
+  <script>
+    // Toggle mobile menu visibility
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
