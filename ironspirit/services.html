@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Iron Spirit</title>
+  <link rel="icon" href="image/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-[var(--light)] text-[var(--black)] font-sans">
+   <!-- Navbar -->
+   <nav class="bg-[var(--black)] text-[var(--light)] p-4 flex items-center justify-between flex-wrap">
+    <div class="flex items-center space-x-4">
+      <img src="image/logo_ironspirit.png" width="50" class="inline-block">
+      <h1 class="text-2xl sm:text-4xl font-bold font-rasputin">IRON SPIRIT</h1>
+    </div>
+    <!-- Mobile Menu Button -->
+    <button class="block sm:hidden focus:outline-none" id="menu-btn">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <div id="nav-links" class="hidden sm:flex flex-col sm:flex-row sm:space-x-6 w-full sm:w-auto mt-4 sm:mt-0 sm:items-center">
+      <a href="index.html" class="hover:text-[var(--red)] px-4 py-2 font-stint">HOME</a>
+      <a href="about.html" class="hover:text-[var(--red)] px-4 py-2 font-stint">ABOUT US</a>
+      <a href="services.html" class="hover:text-[var(--red)] font-bold px-4 py-2 font-stint">SERVICES</a>
+      <a href="book.html" class="bg-[var(--red)] px-4 py-2 rounded text-white hover:bg-[var(--dark-red)] font-stint">BOOK TODAY!</a>
+    </div>
+  </nav>
+
+  <!-- Combined Section Container -->
+  <section class="p-10 max-w-5xl mx-auto">
+    <!-- What We Offer -->
+    <h2 class="text-4xl font-bold text-center mb-10 font-stint">What We Offer</h2>
+    <div class="grid md:grid-cols-2 gap-12 mb-16">
+      <!-- Coach ISK Services -->
+      <div class="bg-white shadow-lg rounded-lg p-6 h-full">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-6 h-full">
+          <div class="flex-1">
+            <h3 class="text-2xl font-bold mb-2 text-[var(--red)]">Coach ISK</h3>
+            <ul class="list-disc pl-6">
+              <li>Kickboxing / Muay Thai</li>
+              <li>Athletic Programming</li>
+              <li>Fight Camp Coaching</li>
+              <li>Fat Loss Programming</li>
+              <li>Health and Nutrition Advice</li>
+            </ul>
+          </div>
+          <div>
+            <img src="image/iliar pic.png" alt="Coach ISK" class="w-40 h-auto rounded">
+          </div>
+        </div>
+      </div>
+
+      <!-- Coach FM Services -->
+      <div class="bg-white shadow-lg rounded-lg p-6 h-full">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-6 h-full">
+          <div class="flex-1">
+            <h3 class="text-2xl font-bold mb-2 text-[var(--red)]">Coach FM</h3>
+            <ul class="list-disc pl-6">
+              <li>Kickboxing / Muay Thai</li>
+              <li>Athletic Programming</li>
+              <li>Fight Camp Coaching</li>
+              <li>Fat Loss Programming</li>
+              <li>Health and Nutrition Advice</li>
+            </ul>
+          </div>
+          <div>
+            <img src="image/filiz pic.png" alt="Coach FM" class="w-40 h-auto rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Packages -->
+    <h2 class="text-3xl font-bold mb-8 text-center">Packages</h2>
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="bg-[var(--red)] text-white shadow-lg rounded-xl p-8 h-full">
+        <h4 class="text-2xl font-bold mb-2">1-to-1 Sessions</h4>
+        <p>Personalised coaching tailored to your goals. Ideal for focused progress.</p>
+      </div>
+      <div class="bg-[var(--red)] text-white shadow-lg rounded-xl p-8 h-full">
+        <h4 class="text-2xl font-bold mb-2">Group Sessions</h4>
+        <p>Train in a motivating environment with others. Great for energy and fun.</p>
+      </div>
+      <div class="bg-[var(--red)] text-white shadow-lg rounded-xl p-8 h-full">
+        <h4 class="text-2xl font-bold mb-2">Custom Programs</h4>
+        <p>Personalised diet and workout plans. Designed to fit your goals and lifestyle.</p>
+      </div>
+      <div class="bg-[var(--red)] text-white shadow-lg rounded-xl p-8 h-full">
+        <h4 class="text-2xl font-bold mb-2">Fight Camp</h4>
+        <p>Includes 1-on-1 sessions, custom fight prep, event scheduling, and 24/7 guidance.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-[var(--black)] text-[var(--light)] p-10 text-center mt-16">
+    <a href="book.html" class="inline-block bg-[var(--red)] px-8 py-4 text-2xl font-bold rounded hover:bg-[var(--dark-red)] mb-6 font-stint">BOOK TODAY!</a>
+    <div class="space-x-4">
+        <a href="legals.html" class="underline hover:text-[var(--red)]">Privacy Policy</a>
+        <a href="legals.html" class="underline hover:text-[var(--red)]">Terms & Conditions</a>
+        <a href="legals.html" class="underline hover:text-[var(--red)]">Health & Medical Disclaimers</a>
+    </div>
+  </footer>
+  <script>
+    // Toggle mobile menu visibility
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

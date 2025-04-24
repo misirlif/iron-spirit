@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Rasputin';
+    src: url('rasputin.otf') format('opentype'); /* adjust path if needed */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .font-rasputin {
+    font-family: 'Rasputin', serif;
+  }
+  
+
+  @font-face {
+    font-family: 'StintUltra';
+    src: url('stint.ttf') format('truetype'); /* adjust path if needed */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .font-stint {
+    font-family: 'StintUltra', serif;
+  }
+  :root {
+    --light: #F6F1EB;
+    --red: #B91B0F;
+    --dark-red: #7C1811;
+    --black: #0C0F0B;
+  }
+  
+  body {
+    background-color: var(--light);
+    background-image: url('image/logo.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: lighten;
+    opacity: 1;
+  }
+  
+  body::before {
+    content: "";
+    background-image: url('image/logo.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  h1,h2,h3,h4{
+    font-family: 'StintUltra', serif;
+}
